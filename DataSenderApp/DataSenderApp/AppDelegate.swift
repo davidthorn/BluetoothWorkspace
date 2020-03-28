@@ -8,45 +8,29 @@
 
 import UIKit
 import CoreBluetooth
-
-struct Item: Identifiable, Hashable {
-
-    var identifier: String
-    var name: String?
-    init(peripheral: CBPeripheral) {
-        identifier = peripheral.identifier.uuidString
-        name = peripheral.name ?? "Unknown"
-    }
-    func setup(cell: UITableViewCell) {
-        cell.textLabel?.text = name
-        cell.detailTextLabel?.text = identifier
-
-    }
-}
+import ResuableTableViewController
+import BluetoothCentralApp
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var centralManager = BluetoothCentralApp()
+
     var window: UIWindow?
+
+    let viewModel = PeripheralItemsViewModel<PeripheralItem>()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let rootViewController = PeripheralListViewController<PeripheralCell, Item>()
-
         let didDiscover: (CBPeripheral) -> Void = { peripheral in
-            let item = Item(peripheral: peripheral)
-            guard !rootViewController.items.contains(item: item) else { return }
-            DispatchQueue.main.async {
-                rootViewController.tableview.beginUpdates()
-                rootViewController.tableview.insertRows(at: [.init(row: rootViewController.items.count, section: 0)],
-                                                        with: .automatic)
-                rootViewController.items.add(item: item)
-                rootViewController.tableview.endUpdates()
-            }
+            let item = PeripheralItem(peripheral: peripheral)
+            self.viewModel.add(item: item)
         }
 
-        rootViewController.didDiscover = didDiscover
+        let rootViewController = ReuseableTableViewController<PeripheralCell, PeripheralItemsViewModel>(viewModel: viewModel)
+
+        centralManager.didDiscover = didDiscover
 
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window = UIWindow.init(frame: UIScreen.main.bounds)

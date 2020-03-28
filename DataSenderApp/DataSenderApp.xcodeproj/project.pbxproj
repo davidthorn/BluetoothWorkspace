@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		931D76DF242F8CD900736B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D76DE242F8CD900736B1D /* AppDelegate.swift */; };
-		931D76E3242F8CDA00736B1D /* PeripheralListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D76E2242F8CD900736B1D /* PeripheralListViewController.swift */; };
 		931D76E6242F8CDA00736B1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931D76E4242F8CDA00736B1D /* Main.storyboard */; };
 		931D76E8242F8CDD00736B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931D76E7242F8CDD00736B1D /* Assets.xcassets */; };
 		931D76EB242F8CDD00736B1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931D76E9242F8CDD00736B1D /* LaunchScreen.storyboard */; };
@@ -17,6 +16,10 @@
 		931D76F7242F8CED00736B1D /* BluetoothPeripheralApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931D76F4242F8CED00736B1D /* BluetoothPeripheralApp.framework */; };
 		931D76F8242F8CED00736B1D /* BluetoothPeripheralApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 931D76F4242F8CED00736B1D /* BluetoothPeripheralApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		931D76FD242F940C00736B1D /* PeripheralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D76FC242F940C00736B1D /* PeripheralCell.swift */; };
+		9358F89B242FA6D400148A5D /* ResuableTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */; };
+		9358F89C242FA6D400148A5D /* ResuableTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		936688E9242FB17E00C92E14 /* PeripheralItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936688E8242FB17E00C92E14 /* PeripheralItem.swift */; };
+		936688ED242FB1EB00C92E14 /* PeripheralItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				931D76F8242F8CED00736B1D /* BluetoothPeripheralApp.framework in Embed Frameworks */,
+				9358F89C242FA6D400148A5D /* ResuableTableViewController.framework in Embed Frameworks */,
 				931D76F6242F8CED00736B1D /* BluetoothCentralApp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -37,7 +41,6 @@
 /* Begin PBXFileReference section */
 		931D76DB242F8CD900736B1D /* DataSenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931D76DE242F8CD900736B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		931D76E2242F8CD900736B1D /* PeripheralListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralListViewController.swift; sourceTree = "<group>"; };
 		931D76E5242F8CDA00736B1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		931D76E7242F8CDD00736B1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		931D76EA242F8CDD00736B1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		931D76F3242F8CED00736B1D /* BluetoothCentralApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BluetoothCentralApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931D76F4242F8CED00736B1D /* BluetoothPeripheralApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BluetoothPeripheralApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931D76FC242F940C00736B1D /* PeripheralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCell.swift; sourceTree = "<group>"; };
+		9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResuableTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		936688E8242FB17E00C92E14 /* PeripheralItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralItem.swift; sourceTree = "<group>"; };
+		936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralItemsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				931D76F7242F8CED00736B1D /* BluetoothPeripheralApp.framework in Frameworks */,
+				9358F89B242FA6D400148A5D /* ResuableTableViewController.framework in Frameworks */,
 				931D76F5242F8CED00736B1D /* BluetoothCentralApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,13 +87,12 @@
 		931D76DD242F8CD900736B1D /* DataSenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				936688E7242FB16100C92E14 /* PeripheralList */,
 				931D76DE242F8CD900736B1D /* AppDelegate.swift */,
-				931D76E2242F8CD900736B1D /* PeripheralListViewController.swift */,
 				931D76E4242F8CDA00736B1D /* Main.storyboard */,
 				931D76E7242F8CDD00736B1D /* Assets.xcassets */,
 				931D76E9242F8CDD00736B1D /* LaunchScreen.storyboard */,
 				931D76EC242F8CDD00736B1D /* Info.plist */,
-				931D76FC242F940C00736B1D /* PeripheralCell.swift */,
 			);
 			path = DataSenderApp;
 			sourceTree = "<group>";
@@ -94,10 +100,21 @@
 		931D76F2242F8CED00736B1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */,
 				931D76F3242F8CED00736B1D /* BluetoothCentralApp.framework */,
 				931D76F4242F8CED00736B1D /* BluetoothPeripheralApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		936688E7242FB16100C92E14 /* PeripheralList */ = {
+			isa = PBXGroup;
+			children = (
+				931D76FC242F940C00736B1D /* PeripheralCell.swift */,
+				936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */,
+				936688E8242FB17E00C92E14 /* PeripheralItem.swift */,
+			);
+			path = PeripheralList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				931D76E3242F8CDA00736B1D /* PeripheralListViewController.swift in Sources */,
+				936688ED242FB1EB00C92E14 /* PeripheralItemsViewModel.swift in Sources */,
 				931D76FD242F940C00736B1D /* PeripheralCell.swift in Sources */,
+				936688E9242FB17E00C92E14 /* PeripheralItem.swift in Sources */,
 				931D76DF242F8CD900736B1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

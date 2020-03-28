@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ResuableTableViewController/ResuableTableViewController.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DataSenderApp/DataSenderApp.xcodeproj">
    </FileRef>
    <FileRef
