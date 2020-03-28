@@ -6,10 +6,10 @@
 //  Copyright © 2020 Thorn, David. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import ResuableTableViewController
 
-final class PeripheralItemsViewModel<T: IdentifiableItem & Hashable>: ReuseableTableViewModelProtocol {
+final class PeripheralItemsViewModel<T: PeripheralItemProtocol & Hashable>: ReuseableTableViewModelProtocol {
 
     typealias PeripheralItemHandler = (Item) -> Void
 
@@ -47,5 +47,15 @@ final class PeripheralItemsViewModel<T: IdentifiableItem & Hashable>: ReuseableT
 
     func didSelect(item: Item) {
         debugPrint("Item was selected \(item.identifier)")
+        let delegate = (UIApplication.shared.delegate as? AppDelegate)
+        guard let navigationController = delegate?.window?.rootViewController as? UINavigationController else { return }
+        
+        let detailViewController = PeripheralDetailViewController(item: item)
+        navigationController.pushViewController(detailViewController, animated: true)
+
+        delegate?.centralManager.connect(peripheral: item.peripheral)
+        
     }
+
+
 }

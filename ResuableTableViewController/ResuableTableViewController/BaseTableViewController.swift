@@ -73,12 +73,16 @@ open class BaseTableViewController<BaseCell: UITableViewCell & BaseCellProtocol,
         return items.count
     }
 
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items.get(index: indexPath.row)
+        viewModel.didSelect(item: item)
+    }
+
     // MARK: Helper Methods
 
     private func addInitialItems(items: [T.Item]) {
         let notLoadeditems = items.filter { !self.items.contains(item: $0) }
-
-        let indexPaths = self.createIndexPaths(from: notLoadeditems, currentCount: items.count)
+        let indexPaths = createIndexPaths(from: notLoadeditems, currentCount: items.count)
 
         guard !notLoadeditems.isEmpty else { return }
 
@@ -88,7 +92,7 @@ open class BaseTableViewController<BaseCell: UITableViewCell & BaseCellProtocol,
     private func shouldAddItem(item: T.Item) {
         guard !items.contains(item: item) else { return  }
 
-        let count = self.items.count
+        let count = items.count
         self.addItems(items: [item], indexPaths: [IndexPath(row: count, section: 0)])
     }
 

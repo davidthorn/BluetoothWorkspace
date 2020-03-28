@@ -50,4 +50,12 @@ public final class BluetoothCentralApp: NSObject, CBCentralManagerDelegate {
         debugPrint("Did discover a peripheral \(String(describing: peripheral.name)) \(peripheral.identifier.uuidString)")
         didDiscover(peripheral)
     }
+
+    public func connect(peripheral: CBPeripheral) {
+        centralManager?.connect(peripheral, options: [:])
+    }
+
+    public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        debugPrint("Did connect to peripheral \(peripheral.name)")
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930DF94E24300580002A2B97 /* PeripheralItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DF94D24300580002A2B97 /* PeripheralItemProtocol.swift */; };
 		931D76DF242F8CD900736B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931D76DE242F8CD900736B1D /* AppDelegate.swift */; };
 		931D76E6242F8CDA00736B1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931D76E4242F8CDA00736B1D /* Main.storyboard */; };
 		931D76E8242F8CDD00736B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931D76E7242F8CDD00736B1D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		9358F89C242FA6D400148A5D /* ResuableTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		936688E9242FB17E00C92E14 /* PeripheralItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936688E8242FB17E00C92E14 /* PeripheralItem.swift */; };
 		936688ED242FB1EB00C92E14 /* PeripheralItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */; };
+		936688F1242FFF7D00C92E14 /* PeripheralDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936688F0242FFF7D00C92E14 /* PeripheralDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		930DF94D24300580002A2B97 /* PeripheralItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralItemProtocol.swift; sourceTree = "<group>"; };
 		931D76DB242F8CD900736B1D /* DataSenderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSenderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931D76DE242F8CD900736B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		931D76E5242F8CDA00736B1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		9358F89A242FA6D400148A5D /* ResuableTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResuableTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		936688E8242FB17E00C92E14 /* PeripheralItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralItem.swift; sourceTree = "<group>"; };
 		936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralItemsViewModel.swift; sourceTree = "<group>"; };
+		936688F0242FFF7D00C92E14 /* PeripheralDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930DF94F243005D9002A2B97 /* PeripheralDetail */ = {
+			isa = PBXGroup;
+			children = (
+				936688F0242FFF7D00C92E14 /* PeripheralDetailViewController.swift */,
+			);
+			path = PeripheralDetail;
+			sourceTree = "<group>";
+		};
 		931D76D2242F8CD900736B1D = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		931D76DD242F8CD900736B1D /* DataSenderApp */ = {
 			isa = PBXGroup;
 			children = (
+				930DF94F243005D9002A2B97 /* PeripheralDetail */,
 				936688E7242FB16100C92E14 /* PeripheralList */,
 				931D76DE242F8CD900736B1D /* AppDelegate.swift */,
 				931D76E4242F8CDA00736B1D /* Main.storyboard */,
@@ -113,6 +126,7 @@
 				931D76FC242F940C00736B1D /* PeripheralCell.swift */,
 				936688EC242FB1EB00C92E14 /* PeripheralItemsViewModel.swift */,
 				936688E8242FB17E00C92E14 /* PeripheralItem.swift */,
+				930DF94D24300580002A2B97 /* PeripheralItemProtocol.swift */,
 			);
 			path = PeripheralList;
 			sourceTree = "<group>";
@@ -190,8 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				936688ED242FB1EB00C92E14 /* PeripheralItemsViewModel.swift in Sources */,
+				936688F1242FFF7D00C92E14 /* PeripheralDetailViewController.swift in Sources */,
 				931D76FD242F940C00736B1D /* PeripheralCell.swift in Sources */,
 				936688E9242FB17E00C92E14 /* PeripheralItem.swift in Sources */,
+				930DF94E24300580002A2B97 /* PeripheralItemProtocol.swift in Sources */,
 				931D76DF242F8CD900736B1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

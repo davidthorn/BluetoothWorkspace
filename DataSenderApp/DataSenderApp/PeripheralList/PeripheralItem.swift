@@ -10,12 +10,14 @@ import UIKit
 import ResuableTableViewController
 import CoreBluetooth
 
-struct PeripheralItem: IdentifiableItem, Hashable {
+struct PeripheralItem: PeripheralItemProtocol, Hashable {
 
     var identifier: String
     var name: String?
+    let peripheral: CBPeripheral
 
     init(peripheral: CBPeripheral) {
+        self.peripheral = peripheral
         identifier = peripheral.identifier.uuidString
         name = peripheral.name ?? "Unknown"
     }

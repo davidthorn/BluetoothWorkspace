@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let rootViewController = ReuseableTableViewController<PeripheralCell, PeripheralItemsViewModel>(viewModel: viewModel)
+        rootViewController.title = "Peripheral List"
 
         centralManager.didDiscover = didDiscover
 
